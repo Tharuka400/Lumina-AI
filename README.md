@@ -33,3 +33,39 @@
 * **Frontend:** React.js (Vite), Axios, CSS3 (Glassmorphism & Custom Animations), Web Speech API
 * **Backend:** Python, FastAPI, Uvicorn, SQLite3
 * **AI & Document Processing:** Google GenAI SDK (`gemini-2.0-flash-lite`), `python-pptx`, `pypdf`
+
+---
+
+## 🚀 Installation & Setup Guide
+
+Follow these steps to run the project locally on your machine:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Tharuka400/Lumina-AI
+   cd Lumina-AI
+   ```
+
+2. **Backend Setup (FastAPI):**
+   ```bash
+   cd backend
+   python -m venv venv
+   venv\Scripts\activate
+   pip install fastapi uvicorn google-genai python-pptx pypdf python-multipart python-dotenv
+   ```
+   *Create a `.env` file inside the `backend` folder and add your Gemini API key:*
+   ```env
+   GEMINI_API_KEY=your_google_gemini_api_key_here
+   ```
+   *Start the backend server:*
+   ```bash
+   uvicorn main:app --reload --port 8000
+   ```
+
+3. **Frontend Setup (React + Vite):**
+   ```bash
+   cd frontend
+   npm install
+   npm run dev
+   ```
+   *Open `http://localhost:5173` in your browser to launch the application.*
